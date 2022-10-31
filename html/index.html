@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Tập 1</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-sm">
+                    <ul class="navbar nav">
+                        <li class="navbar-item" ><a href="#" style="margin-right:20px ;" id="btnHien">Hien</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-md-12">
+                <h3 align="center">Danh sach thanh vien</h3>
+                <table class="table table-striped"  id="DanhSach">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Ma</th>
+                            <th>Ho Ten</th>
+                            <th>Dia Chi</th>
+                            <th>Tien Dich Vu</th>
+                            <th>Tien Do Dung</th>
+                            <th>Tien Giam</th>
+                            <th>Thanh Tien</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>123456789</td>
+                            <td>Hao TH</td>
+                            <td>Phu Yen</td>
+                            <td>30000</td>
+                            <td>30000</td>
+                            <td>10000</td>
+                            <td>50000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- end container -->
+
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document" style="margin-top: 10px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>MODAL VALIDATION</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="" role="form" class="form-horizontal" style="margin-top:10px ;">
+                        <div class="row mb-3">
+                            <label for="ma" class="col-sm-3 col-form-label">Ma khach hang</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="txtMa" placeholder="Nhap ma khach hang">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="hoTen" class="col-sm-3 col-form-label">Ho ten</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="txtTen" placeholder="Nhap ho ten ">
+                            </div>
+                            <div class="col-4">
+                                <span class="text-danger" id="tbTen">*</span>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="dc" class="col-sm-3 col-form-label">Dia chi</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="txtDC" placeholder="Nhap dia chi">
+                            </div>
+                            <div class="col-4">
+                                <span class="text-danger" id="tbDC">*</span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="dichVu" class="col-sm-3 col-form-label">Dich vu</label>
+                            <div class="col-sm-9">
+                                <select name="" id="slGia" class="form-control">
+                                    <option value="3000">Boi</option>
+                                    <option value="5000">Game</option>
+                                    <option value="7000">Nuoc</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="gia" class="col-sm-3 col-form-label">Gia</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="txtGiaDV" placeholder="Nhap gia "
+                                    value="3000">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="">Đồ dùng</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="checkbox" name="" class="chkDoDung" value="20000">Áo quần bơi
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for=""></label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="checkbox" name="" class="chkDoDung" value="50000">Phao
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for=""></label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="checkbox" name="" class="chkDoDung" value="70000">Kính bơi
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="TT" class="col-sm-3 col-form-label">Thanh tien</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="txtKQ" placeholder="" >
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="">Giam tru</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="radio" name="giam" value="7000">Ngày thường
+                                <input type="radio" name="giam" value="1000">Ngày cuối tuần
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="tt" class="col-sm-3 col-form-label">Tong Tien:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="txtTong" placeholder="" >
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="btn" id="btnSave" style="background-color:aqua ;">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
