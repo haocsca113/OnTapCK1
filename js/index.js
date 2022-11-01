@@ -5,12 +5,12 @@ $(document).ready(function () {
 
     function KiemTraMa() {
         var mauKT = /[0-9]{9}$/;
-        if (mauKT.test($("#txtMa").val()) == true) {
-            alert("Ban nhap dung");
+        if (!mauKT.test($("#txtMa").val())) {
+            $("#tbMa").html("* Bạn nhập sai");
+            return false;
         }
-        else {
-            alert("Ban nhap sai");
-        }
+        $("#tbMa").html("*");
+        return true;
     }
     $("#txtMa").blur(KiemTraMa);
 
@@ -85,26 +85,28 @@ $(document).ready(function () {
         var dc = $("#txtDC").val();
         var tdv = $("#txtGiaDV").val();
         var tdd = $("#txtKQ").val();
+        var tiengiam = $("input[name='giam']").val()
         var tong = $("#txtTong").val();
         // var them = "<tr><td>" + (i++) + "</td><td>" + ma + "</td><td>" + ht + "</td><td>" + dc + "</td><td>" + "<tr><td>" + tdv + "</td><td>" + "<tr><td>" + tdd + "</td><tr>" + "<tr><td>" + tong + "</td><td>";
+        
+        var them = "<tr><td>" + (i++) + "</td><td>" + ma + "</td><td>" + ht + "</td><td>" + dc + "</td><td>" + tdv + "</td><td>" + tdd + "</td><td>" + tiengiam + "</td><td>" + tong + "</td></tr>";
 
 
-
-        $("table tbody").append("<tr></tr>");
-        $("table tbody").append((i++));
-        $("table tbody").append("<td></td>");
-        $("table tbody").append(ma);
-        $("table tbody").append("<td></td>");
-        $("table tbody").append(ht);
-        $("table tbody").append("<td></td>");
-        $("table tbody").append(dc);
-        $("table tbody").append("<td></td>");
-        $("table tbody").append(tdv);
-        $("table tbody").append("<td></td>");
-        $("table tbody").append(tdd);
-        $("table tbody").append("<td></td>");
-        $("table tbody").append(tong);
-        // $("table tbody").append(them);
+        // $("table tbody").append("<tr></tr>");
+        // $("table tbody").append((i++));
+        // $("table tbody").append("<td></td>");
+        // $("table tbody").append(ma);
+        // $("table tbody").append("<td></td>");
+        // $("table tbody").append(ht);
+        // $("table tbody").append("<td></td>");
+        // $("table tbody").append(dc);
+        // $("table tbody").append("<td></td>");
+        // $("table tbody").append(tdv);
+        // $("table tbody").append("<td></td>");
+        // $("table tbody").append(tdd);
+        // $("table tbody").append("<td></td>");
+        // $("table tbody").append(tong);
+        $("table tbody").append(them);
         $("#myModal").modal("hide");
         return true;
     })
